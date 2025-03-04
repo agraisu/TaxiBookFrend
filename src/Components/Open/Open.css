@@ -1,0 +1,56 @@
+.skills-container {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f2f5f7;
+  margin-top: -50px;
+}
+
+.skills-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.skills-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.skills-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  width: 395px; /* Increased width from default */
+}
+.skills-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.skill {
+  margin-bottom: 15px;
+}
+
+.skill span {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.progress-bar {
+  height: 6px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: black;
+  border-radius: 5px;
+}

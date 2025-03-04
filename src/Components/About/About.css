@@ -1,0 +1,32 @@
+.about{
+    margin: 100px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+.about-left{
+    flex-basis: 40%;
+}
+.about-right{
+    flex-basis: 56%;
+}
+.about_img{
+    width: 100%;
+    
+}
+.about h3{
+    font-weight: 600;
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+.about_icon{
+    margin-top: 5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+    margin-top: 15px;
+  }
