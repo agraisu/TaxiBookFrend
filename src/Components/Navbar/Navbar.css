@@ -1,29 +1,38 @@
-nav{
-    width: 100%;
-    background: #ffffff;
-    color: #000000;
-    /* top,bottom:4px left,right:0 */
-    padding: 4px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 10;
+.navbar {
+  width: 100%;
+  display: flex;
+  margin-left: -20px;
+  margin-top: -20px;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px;
+  position: fixed;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
 }
-.logo1{
-  width: 60px; 
-  height: 60px; 
-  border-radius: 50%; 
-  background-color: black;
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
+
+.menu-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  position: absolute;
+  left: 20px; /* Default position */
 }
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 5px 20px;
-    font-size: 16px;
+.menu-btn.move-right {
+  transform: translateX(200px); /* Moves right when sidebar is open */
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }

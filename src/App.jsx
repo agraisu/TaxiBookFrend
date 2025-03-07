@@ -1,25 +1,30 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Navbar from './Components/Navbar/Navbar';
-import Hero from './Components/Hero/Hero';
-import About from './Components/About/About';
-import Open from './Components/Open/Open';
-import Project from './Components/Project/Project';
-import Contact from './Components/Contact/Contact';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Footer from './Components/Footer/Footer';
+import DashboardLayout from './DashboardLayout';
+import CustomerDash from './Components/CustomerDash/CustomerDash';
+import CustomerView from './Components/CustomerView/CustomerView';
+import Hires from './Components/Hires/Hires';
+import DriverApp from './Components/DriverApp/DriverApp';
+import Location from './Components/Location/Location';
+import Vehicles from './Components/Vehicles/Vehicles';
+import Payments from './Components/Payments/Payments';
 
 const App = () => {
   return (
     <Router>
-      <Navbar />
-      <div id="hero"> <Hero /> </div> 
-      <div className="container">
-        <div id="about"> <About /> </div> 
-        <div id="skill"> <Open /> </div> 
-        <div id="projects"> <Project /> </div> 
-        <div id="contact"> <Contact /> </div> 
-      </div>
-      <Footer />
+      <DashboardLayout>
+        <Routes>
+          <Route path="/" element={<CustomerDash />} />
+          <Route path="/customers" element={<CustomerView />} />
+          <Route path="/drivers" element={<DriverApp />} />
+          <Route path="/hires" element={<Hires />} />
+          <Route path="/locations" element={<Location />} />
+          <Route path="/vehicles" element={<Vehicles />} />
+          <Route path="/payments" element={<Payments />} />
+        </Routes>
+      </DashboardLayout>
+      {/* <Footer /> */}
     </Router>
   );
 }
