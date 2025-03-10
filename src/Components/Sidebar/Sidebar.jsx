@@ -35,6 +35,11 @@ const Sidebar = ({ isOpen }) => {
           </li>
           <li className={location.pathname === "/hires" ? "active" : ""}>
             <Link to="/hires">
+              <FaMapMarkedAlt /> <span>Hires</span>
+            </Link>
+          </li>
+          <li className={location.pathname === "/locations" ? "active" : ""}>
+            <Link to="/locations">
               <FaMapMarkedAlt /> <span>Locations</span>
             </Link>
           </li>

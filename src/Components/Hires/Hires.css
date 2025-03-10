@@ -1,182 +1,182 @@
 /* Hires Container */
 .hires-container {
-    padding: 20px;
-    background-color: #f5f5f5;
-    min-height: calc(100vh - 60px); /* Adjust based on your navbar height */
-  }
-  
-  /* Header Area */
-  .hires-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .hires-header h1 {
-    font-size: 24px;
-    font-weight: 500;
-    color: #333;
-    margin: 0;
-  }
-  
-  /* New Hire Button */
-  .new-hire-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 16px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  
-  .new-hire-btn:hover {
-    background-color: #2980b9;
-  }
-  
-  /* Table Container */
-  .hires-table-container {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
-  }
-  
-  /* Hires Table */
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: calc(100vh - 60px); /* Adjust based on your navbar height */
+}
+
+/* Header Area */
+.hires-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.hires-header h1 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+}
+
+/* New Hire Button */
+.new-hire-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.new-hire-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Table Container */
+.hires-table-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* Hires Table */
+.hires-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.hires-table th, 
+.hires-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.hires-table th {
+  background-color: #ffffff;
+  color: #666;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.hires-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* UPDATED: Customer and Driver Cells - Moved from td to div inside td */
+.customer-cell,
+.driver-cell {
+  display: flex !important; /* UPDATED: Added !important to ensure styles are applied */
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #f2f2f2;
+}
+
+.customer-info,
+.driver-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-weight: 500;
+  color: #333;
+}
+
+.phone,
+.vehicle {
+  font-size: 12px;
+  color: #888;
+  margin-top: 2px;
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-badge.completed {
+  background-color: #e6f7f0;
+  color: #1eb980;
+}
+
+.status-badge.in-progress {
+  background-color: #e8f4fd;
+  color: #3498db;
+}
+
+.status-badge.cancelled {
+  background-color: #f8eae9;
+  color: #e74c3c;
+}
+
+.status-badge.scheduled {
+  background-color: #fef4e6;
+  color: #f39c12;
+}
+
+/* Amount */
+.amount {
+  font-weight: 500;
+  color: #333;
+}
+
+/* View Details Button */
+.view-details-btn {
+  background: none;
+  border: none;
+  color: #3498db;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 5px;
+  transition: color 0.2s;
+}
+
+.view-details-btn:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
   .hires-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
+    min-width: 1000px;
   }
   
-  .hires-table th, 
-  .hires-table td {
-    padding: 16px;
-    border-bottom: 1px solid #f2f2f2;
+  .hires-table-container {
+    overflow-x: auto;
   }
-  
-  .hires-table th {
-    background-color: #ffffff;
-    color: #666;
-    font-weight: 500;
-    font-size: 14px;
-  }
-  
-  .hires-table tbody tr:hover {
-    background-color: #f9f9f9;
-  }
-  
-  /* Customer and Driver Cells */
-  .customer-cell,
-  .driver-cell {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  
-  .avatar {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #f2f2f2;
-  }
-  
-  .customer-info,
-  .driver-info {
-    display: flex;
+}
+
+@media (max-width: 768px) {
+  .hires-header {
     flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
   }
   
-  .name {
-    font-weight: 500;
-    color: #333;
+  .new-hire-btn {
+    width: 100%;
+    justify-content: center;
   }
-  
-  .phone,
-  .vehicle {
-    font-size: 12px;
-    color: #888;
-    margin-top: 2px;
-  }
-  
-  /* Status Badge */
-  .status-badge {
-    display: inline-block;
-    padding: 4px 10px;
-    border-radius: 50px;
-    font-size: 12px;
-    font-weight: 500;
-  }
-  
-  .status-badge.completed {
-    background-color: #e6f7f0;
-    color: #1eb980;
-  }
-  
-  .status-badge.in-progress {
-    background-color: #e8f4fd;
-    color: #3498db;
-  }
-  
-  .status-badge.cancelled {
-    background-color: #f8eae9;
-    color: #e74c3c;
-  }
-  
-  .status-badge.scheduled {
-    background-color: #fef4e6;
-    color: #f39c12;
-  }
-  
-  /* Amount */
-  .amount {
-    font-weight: 500;
-    color: #333;
-  }
-  
-  /* View Details Button */
-  .view-details-btn {
-    background: none;
-    border: none;
-    color: #3498db;
-    font-size: 14px;
-    cursor: pointer;
-    padding: 5px;
-    transition: color 0.2s;
-  }
-  
-  .view-details-btn:hover {
-    color: #2980b9;
-    text-decoration: underline;
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 1200px) {
-    .hires-table {
-      min-width: 1000px;
-    }
-    
-    .hires-table-container {
-      overflow-x: auto;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .hires-header {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 15px;
-    }
-    
-    .new-hire-btn {
-      width: 100%;
-      justify-content: center;
-    }
-  }
+}

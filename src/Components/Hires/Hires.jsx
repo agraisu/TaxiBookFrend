@@ -63,28 +63,36 @@ const Hires = () => {
           <tbody>
             {hires.map((hire) => (
               <tr key={hire.id}>
-                <td className="customer-cell">
-                  <img 
-                    src={hire.customer.avatar} 
-                    alt={hire.customer.name} 
-                    className="avatar" 
-                  />
-                  <div className="customer-info">
-                    <div className="name">{hire.customer.name}</div>
-                    <div className="phone">{hire.customer.phone}</div>
+                {/* UPDATED: Added a wrapper div inside td to ensure proper containment */}
+                <td>
+                  <div className="customer-cell"> {/* UPDATED: Moved class from td to inner div */}
+                    <img 
+                      src={hire.customer.avatar} 
+                      alt={hire.customer.name} 
+                      className="avatar" 
+                    />
+                    <div className="customer-info">
+                      <div className="name">{hire.customer.name}</div>
+                      <div className="phone">{hire.customer.phone}</div>
+                    </div>
                   </div>
                 </td>
-                <td className="driver-cell">
-                  <img 
-                    src={hire.driver.avatar} 
-                    alt={hire.driver.name} 
-                    className="avatar" 
-                  />
-                  <div className="driver-info">
-                    <div className="name">{hire.driver.name}</div>
-                    <div className="vehicle">{hire.driver.vehicle}</div>
+                
+                {/* UPDATED: Added a wrapper div inside td to ensure proper containment */}
+                <td>
+                  <div className="driver-cell"> {/* UPDATED: Moved class from td to inner div */}
+                    <img 
+                      src={hire.driver.avatar} 
+                      alt={hire.driver.name} 
+                      className="avatar" 
+                    />
+                    <div className="driver-info">
+                      <div className="name">{hire.driver.name}</div>
+                      <div className="vehicle">{hire.driver.vehicle}</div>
+                    </div>
                   </div>
                 </td>
+                
                 <td>{hire.pickupLocation}</td>
                 <td>{hire.dropOffLocation}</td>
                 <td>

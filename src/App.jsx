@@ -9,17 +9,19 @@ import DriverApp from './Components/DriverApp/DriverApp';
 import Location from './Components/Location/Location';
 import Vehicles from './Components/Vehicles/Vehicles';
 import Payments from './Components/Payments/Payments';
+import Animal from './Components/Animal/Animal';
 
 const App = () => {
   return (
     <Router>
+      {/* <Animal /> */}
       <DashboardLayout>
         <Routes>
           <Route path="/" element={<CustomerDash />} />
           <Route path="/customers" element={<CustomerView />} />
           <Route path="/drivers" element={<DriverApp />} />
-          <Route path="/hires" element={<Hires />} />
           <Route path="/locations" element={<Location />} />
+          <Route path="/hires" element={<Hires />} />
           <Route path="/vehicles" element={<Vehicles />} />
           <Route path="/payments" element={<Payments />} />
         </Routes>
